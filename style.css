@@ -1,0 +1,218 @@
+/* Overflow set to scroll and padding/margin set to zero*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding:0;
+    margin:0;
+    background-color: #f4f4f4;
+    padding-left: 0; padding-right: 0;
+    overflow:scroll;
+    min-width:1500px;
+}
+
+.container{
+    width:80%;
+  
+    margin:auto;
+    overflow:hidden;
+    opacity:1;
+}
+ ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+/*Nav Bar and Header*/
+header{
+    
+    background: #29648A;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #1f2833 2px solid; 
+   
+}
+header a{
+    color:white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+header li{
+   display: inline; 
+    padding:0 20px 0 20px;
+    
+    
+}
+header #brandname{
+    float:left;
+}
+header #brandname h1{
+    margin:0;
+    margin-top:5px;
+}
+header nav{
+    
+    float:right;
+    margin-top:20px;
+}
+header .highlight{
+    font-size: 40px;
+}
+header .highlight, header .current{
+    color: lightcoral;
+    font-weight: bold;
+
+}
+header a:hover{
+    color: red;
+    font-weight:bold;
+
+}
+
+/*image and quote*/
+
+#wallpaper{
+    min-height: 450px;
+    background:url('./main.jpg') no-repeat 0 -700px;
+    height:400px;
+   opacity: 0.85;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ p{
+    top: 400px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+#wallpaper h1{
+    display: inline-block;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    margin-top: 250px;
+    font-size: 55px;
+    margin-bottom: 10px;
+    opacity: 1;
+    font-family: 'Times New Roman', Times, serif;
+    color:#000000;
+    text-align: center;
+    
+}
+#emailbox{
+    padding:0;
+    margin-top:-10px;
+    margin-bottom: 10px;
+    /*margin:-10px;*/
+    color: #ffffff;
+    background: #29648A;
+
+}
+#emailbox h1{
+   float:left;
+   color: gold;
+   font-size:20px;
+}
+#emailbox form{
+    float:right;
+    margin-top:15px;
+}
+#searchbox input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+
+}
+.button_1{
+    height:35px;
+    background:lightcoral; 
+    border:0;
+    padding:0 20px 0 20px;
+    color: white;
+
+
+}
+#button_2{
+	height:35px;
+    background:lightcoral; 
+    border:0;
+    padding:0 20px 0 20px;
+    color: white;
+    margin:10px 0px 0px 10px;
+    border-radius: 5px 20px 5px;
+    font-weight: bold;
+    border:2px solid indianred;
+}
+
+/*Dealing with boxes*/
+#boxes{
+    margin-top:20px;
+    background: lightcoral;
+    height:560px;
+}
+#boxes .box{
+    display: inline-block;
+   width:240px;
+   padding: 30px;
+  
+   
+
+}
+#boxes .box img{
+    margin-top:40px;
+    width: 250px;
+    height:350px;
+    border: 1px solid black;
+
+}
+#boxes h3{
+    display: block;
+    padding:5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 2px;
+    
+}
+footer{
+    background-color:  #29648A;
+    color:white;
+    margin-top: -20px;
+    margin-bottom
+    : -20px;
+    padding:20;
+    text-align:center;
+}
+
+.aboutus h1{
+    padding: 10px;
+   margin-top:-20px;
+  
+    color:white;
+    background: #29648A;
+    width:100%;
+    
+}
+.aboutus p{
+    margin-top:-20px;
+    padding: 20px;
+    color:white;
+    background: lightcoral;
+}
+.contactus h1{
+    padding: 10px;
+    margin-top:-20px;
+   
+     color:white;
+     background: #29648A;
+     width:100%;
+}
+.contactus p{
+    margin-top:-20px;
+    padding: 20px;
+    color:white;
+    background: lightcoral;
+}
