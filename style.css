@@ -7,8 +7,10 @@ body{
     margin:0;
     background-color: #f4f4f4;
     padding-left: 0; padding-right: 0;
-    overflow:scroll;
+    overflow-y:scroll;
+    overflow-x: hiddem;
     min-width:1500px;
+   
 }
 
 .container{
@@ -127,7 +129,7 @@ header a:hover{
     width:250px;
 
 }
-.button_1{
+#button_1{
     height:35px;
     background:lightcoral; 
     border:0;
@@ -152,7 +154,7 @@ header a:hover{
 #boxes{
     margin-top:20px;
     background: lightcoral;
-    height:560px;
+   min-height:560px;
 }
 #boxes .box{
     display: inline-block;
@@ -183,17 +185,18 @@ footer{
     margin-top: -20px;
     margin-bottom
     : -20px;
-    padding:20;
+    padding:20 px;
     text-align:center;
 }
 
 .aboutus h1{
-    padding: 10px;
+    padding: 20px;
    margin-top:-20px;
-  
+   margin-bottom
+    : -20px;
     color:white;
     background: #29648A;
-    width:100%;
+   
     
 }
 .aboutus p{
@@ -201,6 +204,7 @@ footer{
     padding: 20px;
     color:white;
     background: lightcoral;
+    
 }
 .contactus h1{
     padding: 10px;
@@ -208,7 +212,7 @@ footer{
    
      color:white;
      background: #29648A;
-     width:100%;
+     
 }
 .contactus p{
     margin-top:-20px;
@@ -216,3 +220,109 @@ footer{
     color:white;
     background: lightcoral;
 }
+.extra h1{
+    padding: 10px;
+    margin-top:-20px;
+     color:white;
+     background: #29648A;
+     
+}
+
+.extra .contain{
+    margin-top:-20px;
+    padding: 20px;
+    color:white;
+    background: lightcoral;
+    
+}
+
+
+
+.extra{
+    background: lightcoral;
+}
+
+#button_3{
+	height:35px;
+    background:rgb(25, 74, 121); 
+    border:0;
+    padding:0 20px 0 20px;
+    color: white;
+    margin:10px 0px 0px 10px;
+    border-radius: 5px 20px 5px;
+    font-weight: bold;
+    border:2px solid indianred;
+}
+
+#rateUsPlease h1{
+    padding: 10px;
+    margin-top:-20px;
+   
+     color:white;
+     background: #29648A;
+   
+}
+table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #d4d4d4;
+    font-size: 20px;
+    background: #fff;
+  }
+   
+  table th, 
+  table tr:nth-child(2n+2) {
+    background: rgb(87, 167, 218);
+  }
+    
+  table th, 
+  table td {
+    padding: 20px 50px;
+  }
+    
+  table th {
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+   
+  .stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+  }
+   
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+   
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+  }
+  #select-catagory{
+     
+      padding: 10px;
+      margin: 0 0 10px 10px ;
+      color: black;
+      
+      border: 2px solid black;
+
+  }
+  #rating-control{
+
+   padding:10px;
+    color: black;
+    margin: 0 0 10px 10px;
+    border: 2px solid black;
+    
+    
+
+  }

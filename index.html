@@ -6,7 +6,7 @@
         <title>Dhaago Fashion Outlet</title>
         <!--Reference to style.css file in the same folder-->  
         <link href=".\style.css" type="text/css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -40,10 +40,12 @@
              
              <input id="button_2" type="button" value="GET CODE !!!" onClick="change()">
              <!--Link to: compose email to someone@gmail.com-->
-             <form action="https://mail.google.com/mail/u/0/?#inbox?compose=1658c5fc14d63e5a" target="_blank">
-                 <input type="email" placeholder="Email address..">
-                 <button type ="Submit" class="button_1">Subscribe</button>
-             </form>
+             <form>
+                 <input id="emailid" type="email" placeholder="Email address.." value="">
+
+                 <input id="button_1" type="button" value="subscribe" onClick="subscribe()">
+                </form>
+             
          </div>
      </section>
 
@@ -58,6 +60,7 @@
                     <img src=".\imgtwo.jpg">
                     <h3>Latest Bridal Lehengas</h3>
                 </div>
+
 
                 <div class="box">
                         <img src=".\imgthree.jpg">
@@ -78,7 +81,8 @@
 
      <section class="contactus">
          <div id="contact">
-          <h1>Contact Us</h1>
+          <h1>Contact
+               Us</h1>
 
           <p>
               
@@ -105,7 +109,99 @@
          </div>
          
      </section>
+    <section class="extra">
+      <div>
 
+       <h1>Estimate the price of our outfits</h1>
+ 
+    <div class="contain">
+        <h2>Are you a ____?</h2> 
+       <form>
+            <div>
+                    <input type="radio" id="option1"
+                    name="options" value="bride">
+                   <label for="option1">Bride</label>
+               
+                   <input type="radio" id="option2"
+                    name="options" value="bridesmaid">
+                   <label for="option2">Bridesmaid</label>
+               
+                   <input type="radio" id="option3"
+                    name="options" value="casual">
+                   <label for="option3">Casual</label>
+                </div>
+                <div>
+                    <br><br>
+                    <input id="text" type="text" value="NPR 0.00">
+                    <br><br>
+                        <input id="button_3" type="button" value="Click here" onClick="getPrice()">
+                      </div>
+
+
+
+            
+        </form>
+
+       
+             
+            
+      </div>
+<br><br>
+
+<div id="rateUsPlease">
+    <h1>Rate Us Please!!</h1>
+</div>
+
+      <table>
+            <thead>
+               <tr>
+                 <th>Catagories</th>
+                 <th>Rating</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr class="quality">
+                 <td>Quality</td>
+                 <td>
+                     <!--To generate star rating on our website-->
+                   <div class="stars-outer">
+                     <div class="stars-inner"></div>
+                   </div>
+                 </td>
+               </tr>
+               <tr class="price">
+                 <td>Price</td>
+                 <td>
+                   <div class="stars-outer">
+                     <div class="stars-inner"></div>
+                   </div>
+                 </td>
+               </tr>
+               <tr class="variety">
+                    <td>Variety</td>
+                    <td>
+                      <div class="stars-outer">
+                        <div class="stars-inner"></div>
+                      </div>
+                    </td>
+                  </tr>
+            
+               <!-- 3 more rows here -->
+                
+             </tbody>
+           </table>
+         <div class="form-catagory" class="form-group">
+           <select id="select-catagory">
+                <option value="0" disabled selected>Select catagories</option>
+            <option value="quality">Quality</option> 
+            <option value="price">Price</option>
+            <option value="variety">Variety</option>
+          </select>
+</div>
+ <div class="form-group">
+     <input type="number" id="rating-control" class="form-control" step="0.1"max="5.0" placeholder="Rate 1-5" disabled>
+ </div>
+    </section>
 
      <script src=".\script.js"defer></script>
 
@@ -116,7 +212,9 @@
          <p>Dhaago Fashion Outlet, Copyright &copy; 2018</p>
      </footer>
 
-    </body>
+  
+
+
 
 
 </html>
