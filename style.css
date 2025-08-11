@@ -1,328 +1,654 @@
-/* Overflow set to scroll and padding/margin set to zero*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    padding:0;
-    margin:0;
-    background-color: #f4f4f4;
-    padding-left: 0; padding-right: 0;
-    overflow-y:scroll;
-    overflow-x: hiddem;
-    min-width:1500px;
-   
+/* Import modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Modern CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    width:80%;
-  
-    margin:auto;
-    overflow:hidden;
-    opacity:1;
+:root {
+    /* Modern Color Palette */
+    --primary-color: #2C3E50;
+    --primary-light: #34495E;
+    --accent-color: #E74C3C;
+    --accent-light: #F39C12;
+    --secondary-color: #8E44AD;
+    --gold-accent: #F1C40F;
+    --text-dark: #2C3E50;
+    --text-light: #7F8C8D;
+    --background-light: #F8F9FA;
+    --background-white: #FFFFFF;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --gradient-primary: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    --gradient-accent: linear-gradient(135deg, #E74C3C 0%, #F39C12 100%);
 }
- ul{
-    margin:0;
-    padding:0;
+
+/* Body and Global Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--background-light);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+ul {
     list-style: none;
 }
 
-/*Nav Bar and Header*/
-header{
-    
-    background: #29648A;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #1f2833 2px solid; 
-   
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
-header a{
-    color:white;
+
+/* Header Styling */
+header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #brandname h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+header .highlight {
+    color: var(--gold-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    color: white;
+    font-weight: 500;
     text-transform: uppercase;
-    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
-header li{
-   display: inline; 
-    padding:0 20px 0 20px;
-    
-    
-}
-header #brandname{
-    float:left;
-}
-header #brandname h1{
-    margin:0;
-    margin-top:5px;
-}
-header nav{
-    
-    float:right;
-    margin-top:20px;
-}
-header .highlight{
-    font-size: 40px;
-}
-header .highlight, header .current{
-    color: lightcoral;
-    font-weight: bold;
-
-}
-header a:hover{
-    color: red;
-    font-weight:bold;
-
+header nav a:hover,
+header .current a {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
-/*image and quote*/
-
-#wallpaper{
-    min-height: 450px;
-    background:url('./main.jpg') no-repeat 0 -700px;
-    height:400px;
-   opacity: 0.85;
+/* Hero Section (Wallpaper) */
+#wallpaper {
+    min-height: 70vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(52, 73, 94, 0.7)), url('./main.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10px;
-}
-
- p{
-    top: 400px;
-    font-size: 20px;
-    color: #000000;
-    font-weight: bold;
-}
-
-#wallpaper h1{
-    display: inline-block;
-    border-top: 2px solid whitesmoke;
-    border-bottom: 2px solid whitesmoke;
-    margin-top: 250px;
-    font-size: 55px;
-    margin-bottom: 10px;
-    opacity: 1;
-    font-family: 'Times New Roman', Times, serif;
-    color:#000000;
-    text-align: center;
-    
-}
-#emailbox{
-    padding:0;
-    margin-top:-10px;
-    margin-bottom: 10px;
-    /*margin:-10px;*/
-    color: #ffffff;
-    background: #29648A;
-
-}
-#emailbox h1{
-   float:left;
-   color: gold;
-   font-size:20px;
-}
-#emailbox form{
-    float:right;
-    margin-top:15px;
-}
-#searchbox input[type="email"]{
-    padding:4px;
-    height:25px;
-    width:250px;
-
-}
-#button_1{
-    height:35px;
-    background:lightcoral; 
-    border:0;
-    padding:0 20px 0 20px;
     color: white;
-
-
-}
-#button_2{
-	height:35px;
-    background:lightcoral; 
-    border:0;
-    padding:0 20px 0 20px;
-    color: white;
-    margin:10px 0px 0px 10px;
-    border-radius: 5px 20px 5px;
-    font-weight: bold;
-    border:2px solid indianred;
+    position: relative;
+    overflow: hidden;
 }
 
-/*Dealing with boxes*/
-#boxes{
-    margin-top:20px;
-    background: lightcoral;
-   min-height:560px;
-}
-#boxes .box{
-    display: inline-block;
-   width:240px;
-   padding: 30px;
-  
-   
-
-}
-#boxes .box img{
-    margin-top:40px;
-    width: 250px;
-    height:350px;
-    border: 1px solid black;
-
-}
-#boxes h3{
-    display: block;
-    padding:5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    margin: 2px;
-    
-}
-footer{
-    background-color:  #29648A;
-    color:white;
-    margin-top: -20px;
-    margin-bottom
-    : -20px;
-    padding:20 px;
-    text-align:center;
+#wallpaper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(241, 196, 15, 0.1));
+    animation: shimmer 3s ease-in-out infinite;
 }
 
-.aboutus h1{
-    padding: 20px;
-   margin-top:-20px;
-   margin-bottom
-    : -20px;
-    color:white;
-    background: #29648A;
-   
-    
-}
-.aboutus p{
-    margin-top:-20px;
-    padding: 20px;
-    color:white;
-    background: lightcoral;
-    
-}
-.contactus h1{
-    padding: 10px;
-    margin-top:-20px;
-   
-     color:white;
-     background: #29648A;
-     
-}
-.contactus p{
-    margin-top:-20px;
-    padding: 20px;
-    color:white;
-    background: lightcoral;
-}
-.extra h1{
-    padding: 10px;
-    margin-top:-20px;
-     color:white;
-     background: #29648A;
-     
+@keyframes shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
 }
 
-.extra .contain{
-    margin-top:-20px;
-    padding: 20px;
-    color:white;
-    background: lightcoral;
-    
+#wallpaper .container {
+    position: relative;
+    z-index: 2;
 }
 
-
-
-.extra{
-    background: lightcoral;
+#wallpaper h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out;
 }
 
-#button_3{
-	height:35px;
-    background:rgb(25, 74, 121); 
-    border:0;
-    padding:0 20px 0 20px;
-    color: white;
-    margin:10px 0px 0px 10px;
-    border-radius: 5px 20px 5px;
-    font-weight: bold;
-    border:2px solid indianred;
-}
-
-#rateUsPlease h1{
-    padding: 10px;
-    margin-top:-20px;
-   
-     color:white;
-     background: #29648A;
-   
-}
-table {
+#wallpaper p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 800px;
     margin: 0 auto;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Email Subscription Section */
+#emailbox {
+    background: var(--gradient-accent);
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 -5px 20px var(--shadow-light);
+}
+
+#emailbox .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#emailbox h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#emailbox form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#emailid {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#emailid:focus {
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+#button_1 {
+    background: white;
+    color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#button_1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+#button_2 {
+    background: var(--gold-accent);
+    color: var(--text-dark);
+    margin-left: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#button_2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(241, 196, 15, 0.4);
+}
+
+/* Product Showcase Section */
+#boxes {
+    padding: 80px 0;
+    background: white;
+}
+
+#boxes .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+}
+
+.box {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-medium);
+}
+
+.box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.box:hover img {
+    transform: scale(1.05);
+}
+
+.box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    margin: 0;
+}
+
+/* Content Sections */
+.section-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 30px 0;
+    margin: 60px 0 0;
+}
+
+.section-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-content {
+    background: white;
+    padding: 50px 0;
+    box-shadow: 0 5px 20px var(--shadow-light);
+}
+
+.section-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+.aboutus h1,
+.contactus h1,
+.extra h1 {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 30px 0;
+    margin: 60px 0 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus p,
+.contactus p {
+    background: white;
+    padding: 50px 20px;
+    margin: 0;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+/* Price Estimation Section */
+.extra .contain {
+    background: white;
+    padding: 50px 20px;
+    margin: 0;
+    box-shadow: 0 5px 20px var(--shadow-light);
+    text-align: center;
+}
+
+.contain h2 {
+    color: var(--text-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.contain form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contain form > div:first-child {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contain input[type="radio"] {
+    margin-right: 10px;
+    scale: 1.5;
+}
+
+.contain label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.contain input[type="text"] {
+    padding: 15px 25px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    background: var(--background-light);
+    color: var(--text-dark);
+    width: 200px;
+}
+
+#button_3 {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+#button_3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+/* Rating Section */
+#rateUsPlease h1 {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 30px 0;
+    margin: 60px 0 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    margin: 30px auto;
     text-align: center;
     border-collapse: collapse;
-    border: 1px solid #d4d4d4;
-    font-size: 20px;
-    background: #fff;
-  }
-   
-  table th, 
-  table tr:nth-child(2n+2) {
-    background: rgb(87, 167, 218);
-  }
-    
-  table th, 
-  table td {
-    padding: 20px 50px;
-  }
-    
-  table th {
-    border-bottom: 1px solid #d4d4d4;
-  }
-  .stars-outer {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    background: white;
+    font-size: 18px;
+}
+
+table th {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+table td {
+    padding: 25px 40px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+table tr:hover {
+    background: #e8f4f8;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Star Rating Styles */
+.stars-outer {
     display: inline-block;
     position: relative;
     font-family: FontAwesome;
-  }
-   
-  .stars-outer::before {
+    font-size: 1.5rem;
+}
+
+.stars-outer::before {
     content: "\f006 \f006 \f006 \f006 \f006";
-  }
-   
-  .stars-inner {
+    color: #ddd;
+}
+
+.stars-inner {
     position: absolute;
     top: 0;
     left: 0;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-  }
-   
-  .stars-inner::before {
+}
+
+.stars-inner::before {
     content: "\f005 \f005 \f005 \f005 \f005";
-    color: #f8ce0b;
-  }
-  #select-catagory{
-     
-      padding: 10px;
-      margin: 0 0 10px 10px ;
-      color: black;
-      
-      border: 2px solid black;
+    color: var(--gold-accent);
+}
 
-  }
-  #rating-control{
+/* Form Controls */
+#select-catagory,
+#rating-control {
+    padding: 15px 20px;
+    margin: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
 
-   padding:10px;
-    color: black;
-    margin: 0 0 10px 10px;
-    border: 2px solid black;
+#select-catagory:focus,
+#rating-control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 -5px 20px var(--shadow-light);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
     
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
     
+    header nav ul {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    #wallpaper h1 {
+        font-size: 2.5rem;
+    }
+    
+    #wallpaper p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    #emailbox .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    #emailbox form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    #emailid {
+        width: 100%;
+    }
+    
+    #boxes .container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .contain form > div:first-child {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    table {
+        font-size: 14px;
+        margin: 20px;
+    }
+    
+    table th,
+    table td {
+        padding: 15px 20px;
+    }
+}
 
-  }
+@media (max-width: 480px) {
+    #wallpaper h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h1 {
+        font-size: 2rem;
+    }
+    
+    table th,
+    table td {
+        padding: 10px 15px;
+    }
+}
+
+/* Smooth animations for better user experience */
+.box,
+.button,
+#emailid,
+#select-catagory,
+#rating-control {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
